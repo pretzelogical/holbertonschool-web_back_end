@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 export default function appendToEachArrayValue(array, appendString) {
-  const new_arr = [];
+  const newArr = [];
   for (const value of array) {
-    new_arr.push(appendString + value);
+    newArr.push(appendString + value);
   }
-  return new_arr;
+  return newArr;
 }
