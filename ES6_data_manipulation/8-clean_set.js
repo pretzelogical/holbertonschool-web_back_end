@@ -7,10 +7,7 @@ export default function cleanSet(set, startString) {
     return cleanStr;
   }
   set.forEach((s) => {
-    // if (!(typeof s === 'string')) {
-    //   return '';
-    // }
-    if (s.startsWith(startString)) {
+    if (typeof s === 'string' && s.startsWith(startString)) {
       cleanStr += `${s.replace(startString, '')}-`;
     }
   });
