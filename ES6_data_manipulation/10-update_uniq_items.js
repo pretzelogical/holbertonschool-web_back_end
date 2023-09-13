@@ -1,7 +1,7 @@
 export default function updateUniqueItems(map) {
   const quantity = [];
   if (!(map instanceof Map)) {
-    throw new Error('Cannot proccss');
+    throw new Error('Cannot process');
   }
   map.forEach((value, key) => {
     if (value === 1) {
