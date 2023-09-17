@@ -18,7 +18,6 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         status: 'error',
         value: err,
       });
-      console.log(promiseResults);
     });
   return new Promise((resolve, reject) => {
     resolve(promiseResults);
