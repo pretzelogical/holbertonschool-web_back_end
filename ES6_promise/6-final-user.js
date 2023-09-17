@@ -10,7 +10,7 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
   } catch (err) {
     promiseResults.push({
       status: 'rejected',
-      value: err.message,
+      value: err.toString(),
     });
   }
   return promiseResults;
