@@ -5,8 +5,13 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
   const promiseResults = [];
   try {
     const userRes = await signUpUser(firstName, lastName);
-    promiseResults.push({ status: 'fufilled', value: userRes });
-    const photoRes = await uploadPhoto(fileName);
+    promiseResults.push({
+      status: 'fufilled', value: {
+        firstName,
+        lastName,
+      }
+    });
+    await uploadPhoto(fileName);
   } catch (err) {
     promiseResults.push({
       status: 'rejected',
